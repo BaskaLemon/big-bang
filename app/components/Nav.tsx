@@ -1,5 +1,6 @@
 import Link from "next/link";
 import React from "react";
+import AimagDropdown from "./AimagDropdown";
 
 const Nav = () => {
   return (
@@ -8,24 +9,7 @@ const Nav = () => {
         Big Bang
       </Link>
       <div className="flex space-x-5 text-gray-300 text-md font-medium items-center">
-        <button className="flex items-center gap-2 bg-neutral-800 text-white text-sm font-medium px-4 py-2 rounded-full border border-neutral-700">
-          <span className="w-2 h-2 rounded-full bg-[#f5c52a]" />
-          <span>All</span>
-          <span className="text-[#f5c52a] font-semibold">52</span>
-          <svg
-            width="12"
-            height="12"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2.5"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            className="text-neutral-400 ml-0.5"
-          >
-            <polyline points="6 9 12 15 18 9" />
-          </svg>
-        </button>
+        <AimagDropdown />
         <Link href={"/"} className="hover:text-white">
           Home
         </Link>

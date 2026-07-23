@@ -42,8 +42,13 @@ export default function AimagDropdown() {
         className="flex items-center gap-2 bg-neutral-800 text-white text-sm font-medium px-4 py-2 rounded-full border border-neutral-700"
       >
         <span className="w-2 h-2 rounded-full bg-[#f5c52a]" />
-        <span>All</span>
-        <span className="text-[#f5c52a] font-semibold">{TOTAL}</span>
+        <span>{selected ?? "All"}</span>
+
+        <span className="text-yellow-400 font-semibold">
+          {selected
+            ? (AIMAGS.find((a) => a.name === selected)?.count ?? 0)
+            : TOTAL}
+        </span>
         <svg
           width="12"
           height="12"
